@@ -1,0 +1,307 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div id="loading" style="display:none"><img id="loading-image" src="../Content/img/loader.gif" alt="Yükleniyor..." /></div>
+
+
+<!-- Table Section Start -->
+<section class="section">
+    
+
+
+    <!-- Container Starts -->
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">FİRMALAR</h2>
+            <hr class="lines">
+            <p class="section-subtitle">TOP 5</p>
+        </div>
+        <div class="row table-responsive">
+
+            <table class="table table-striped scrolldiv">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">06-2010</th>
+                        <th scope="col">11-2010</th>
+                        <th scope="col">10-2010</th>
+                        <th scope="col">12-2010</th>
+                        <th scope="col">07-2010</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Ak</th>
+                        <td>-15156</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-15156</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Allianz</th>
+                        <td>45645646</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-15156</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ak</th>
+                        <td>452446</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-15156</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Allianz</th>
+                        <td>-425456</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-15156</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ak</th>
+                        <td>453454321</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-15156</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    <!-- Container Ends -->
+
+</section>
+<!-- Table Section End -->
+<!-- Hesapla Section Start -->
+<section id="features" class="section" data-stellar-background-ratio="0.2">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Nasıl Kullanılır ?</h2>
+            <hr class="lines">
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-xs-12">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-5 col-sm-5 col-xs-12 box-item">
+                            <span class="icon">
+                                <i>1</i>
+                            </span>
+                            <div class="text">
+                                <h4>Ana Branş</h4>
+                                <p>Ana Branşı seçiniz.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5 col-sm-5 col-xs-12 box-item">
+                            <span class="icon">
+                                <i>2</i>
+                            </span>
+                            <div class="text">
+                                <h4>Alt Branş</h4>
+                                <p>İşlem yapmak istediğiniz alt branşı seçiniz.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-5 col-sm-5 col-xs-12 box-item">
+                            <span class="icon">
+                                <i>3</i>
+                            </span>
+                            <div class="text">
+                                <h4>Şirket Grubu</h4>
+                                <p>Şirket grubunu seçiniz.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-sm-5 col-xs-12 box-item">
+                            <span class="icon">
+                                <i>4</i>
+                            </span>
+                            <div class="text">
+                                <h4>OK</h4>
+                                <p></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Hesapla Section End -->
+<!-- Hesapla Al Section -->
+<section id="services" class="video-promo section" >
+
+
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="text-center">
+                <div class="video-promo-content text-center dropdownbase">
+                    <h2 class="wow zoomIn" data-wow-duration="1000ms" data-wow-delay="100ms">HESAPLA</h2>
+
+
+                    <div class="btn-group groupPartial">
+                        @Html.Action("BranchGroup")
+                    </div>
+                    <div class="btn-group branchPartial" style="display:none">
+                        @Html.Action("Branch")
+                    </div>
+
+
+                    <div class="btn-group typePartial" style="display:none">
+                        @Html.Action("CompanyTypeSelector")
+                    </div>
+                    <div class="btn-group companyPartial" style="display:none">
+                        @Html.Action("CompanySelector")
+                    </div>
+
+                    <div class="btn-group datePartial" style="display:none">
+                        @Html.Action("Account")
+                    </div>
+                    <div class="btn-group calcPartial" style="display:none">
+                        @Html.Action("calculate")
+                    </div>
+
+                </div>
+                <button id="hesapla" class="btn-calculate" style="cursor:pointer">DEVAM</button>
+                
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Hesapla Al Section -->
+
+<!-- Sayaç Section Start -->
+<div class="counters section" data-stellar-background-ratio="0.5" style="margin-top: 0px!important" >
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-3 col-lg-3">
+                <div class="facts-item">
+                    <div class="icon">
+                        <i class="lnr lnr-clock"></i>
+                    </div>
+                    <div class="fact-count">
+                        <h3><span class="counter">1589</span></h3>
+                        <h4>Yıllık Sorgu </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-3">
+                <div class="facts-item">
+                    <div class="icon">
+                        <i class="lnr lnr-briefcase"></i>
+                    </div>
+                    <div class="fact-count">
+                        <h3><span class="counter">699</span></h3>
+                        <h4>Aylık Sorgu</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-3">
+                <div class="facts-item">
+                    <div class="icon">
+                        <i class="lnr lnr-user"></i>
+                    </div>
+                    <div class="fact-count">
+                        <h3><span class="counter">203</span></h3>
+                        <h4>Günlük Sorgu</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-3">
+                <div class="facts-item">
+                    <div class="icon">
+                        <i class="lnr lnr-heart"></i>
+                    </div>
+                    <div class="fact-count">
+                        <h3><span class="counter">1689</span></h3>
+                        <h4>Ziyaretçi</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Sayaç Section End -->
+<!-- İletişim Section Start -->
+<section id="contact" class="section" data-stellar-background-ratio="-0.2">
+    <div class="contact-form">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-sm-6 col-xs-12">
+                    <div class="contact-us">
+                        <h3>Bizimle İletişime Geçmek İçin Eposta Adresimiz</h3>
+                        <div class="contact-address">
+                            <p class="email">E-mail: <span>(iletisim@admin.com)</span></p>
+                        </div>
+                        <div class="social-icons">
+                            <ul>
+                                <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li class="dribbble"><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-6 col-xs-12">
+                    <div class="contact-block">
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="İsim" required data-error="Lütfen adınızı giriniz">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" placeholder="E-mail" id="email" class="form-control" name="name" required data-error="Lütfen mail adresinizi giriniz">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control" id="message" placeholder="Mesaj" rows="8" data-error="Mesajınızı yazınız" required></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="submit-button text-center">
+                                        <button class="btn btn-common" id="submit" type="submit">GÖNDER</button>
+                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- İletişim Section End -->
+<!-- Referans Section Start -->
+<div id="calculateresultget" class="section" data-stellar-background-ratio="0.1">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div id="calculateresult" class="col-md-12">
+                <p class="text-center"><b> Sorgu Sonuçları </b></p>
+                <br />
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Referans Section Start -->

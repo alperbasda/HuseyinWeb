@@ -1,0 +1,19 @@
+﻿@model List<MuhasebeWeb.Models.Calc>
+<div class="form-group m-form__group ">
+    <div class="form-group m-form__group">
+
+        <label>
+            Hesaplama Türü
+        </label>
+
+        <br />
+        <select id="calculateSelector">
+            @foreach (var item in Model)
+            {
+                <option value="@item.id"> @item.name</option>
+            }
+        </select>
+    </div>
+</div>
+
+

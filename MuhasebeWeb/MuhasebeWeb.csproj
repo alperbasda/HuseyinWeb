@@ -1,0 +1,680 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FFBF520F-03C8-4C37-BB73-041AC32B5AD6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MuhasebeWeb</RootNamespace>
+    <AssemblyName>MuhasebeWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>AllFilesInTheProject</FilesToIncludeForPublish>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Spreadsheet.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxSpreadsheet.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxThemes.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.Mvc5.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Azure.AppService.ApiApps.Service, Version=0.9.16.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.AppService.ApiApps.Service.0.9.16\lib\net45\Microsoft.Azure.AppService.ApiApps.Service.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Swashbuckle.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cd1bb07a5ac7c7bc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Swashbuckle.Core.5.0.0\lib\net40\Swashbuckle.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.4.0.0\lib\net45\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.0.6\lib\net40\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\SwaggerConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803171325433_decimalsds.cs" />
+    <Compile Include="Migrations\201803171325433_decimalsds.Designer.cs">
+      <DependentUpon>201803171325433_decimalsds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\AccountCalcRelation.cs" />
+    <Compile Include="Models\AccountCalcRelationHelper.cs" />
+    <Compile Include="Models\Branch.cs" />
+    <Compile Include="Models\BranchGroup.cs" />
+    <Compile Include="Models\Calc.cs" />
+    <Compile Include="Models\Company.cs" />
+    <Compile Include="Models\companyDateHelper.cs" />
+    <Compile Include="Models\CompanyType.cs" />
+    <Compile Include="Models\Data.cs" />
+    <Compile Include="Models\DB.cs" />
+    <Compile Include="Models\TableModels\AccountCalcRelationTable.cs" />
+    <Compile Include="Models\TableModels\AccountTable.cs" />
+    <Compile Include="Models\TableModels\BasicTable.cs" />
+    <Compile Include="Models\TableModels\BranchGroupTable.cs" />
+    <Compile Include="Models\TableModels\BranchTable.cs" />
+    <Compile Include="Models\TableModels\CalcTable.cs" />
+    <Compile Include="Models\TableModels\CompanyTable.cs" />
+    <Compile Include="Models\TableModels\CompanyTypeTable.cs" />
+    <Compile Include="Models\TableModels\DataTable.cs" />
+    <Compile Include="Models\TableModels\TableCRUD\AccountBusiness.cs" />
+    <Compile Include="Models\TableModels\TableCRUD\AccountCalcRelationBusiness.cs" />
+    <Compile Include="Models\TableModels\TableCRUD\BranchBusiness.cs" />
+    <Compile Include="Models\TableModels\TableCRUD\BranchGroupBusiness.cs" />
+    <Compile Include="Models\TableModels\TableCRUD\BusinessLayer.cs" />
+    <Compile Include="Models\TableModels\TableCRUD\CalcBusiness.cs" />
+    <Compile Include="Models\TableModels\TableCRUD\CompanyBusiness.cs" />
+    <Compile Include="Models\TableModels\TableCRUD\CompanyTypeBusiness.cs" />
+    <Compile Include="Models\TableModels\TableCRUD\DataBusiness.cs" />
+    <Compile Include="Models\TableModels\TableCRUD\IBusinessLayer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Antlr3.Runtime.dll" />
+    <Content Include="bin\Antlr3.Runtime.pdb" />
+    <Content Include="bin\DevExpress.Charts.v16.1.Core.dll" />
+    <Content Include="bin\DevExpress.CodeParser.v16.1.dll" />
+    <Content Include="bin\DevExpress.Data.v16.1.dll" />
+    <Content Include="bin\DevExpress.Data.v16.1.xml" />
+    <Content Include="bin\DevExpress.DataAccess.v16.1.dll" />
+    <Content Include="bin\DevExpress.DataAccess.v16.1.xml" />
+    <Content Include="bin\DevExpress.Office.v16.1.Core.dll" />
+    <Content Include="bin\DevExpress.Office.v16.1.Core.xml" />
+    <Content Include="bin\DevExpress.Pdf.v16.1.Core.dll" />
+    <Content Include="bin\DevExpress.Pdf.v16.1.Core.xml" />
+    <Content Include="bin\DevExpress.Pdf.v16.1.Drawing.dll" />
+    <Content Include="bin\DevExpress.Pdf.v16.1.Drawing.xml" />
+    <Content Include="bin\DevExpress.PivotGrid.v16.1.Core.dll" />
+    <Content Include="bin\DevExpress.PivotGrid.v16.1.Core.xml" />
+    <Content Include="bin\DevExpress.Printing.v16.1.Core.dll" />
+    <Content Include="bin\DevExpress.Printing.v16.1.Core.xml" />
+    <Content Include="bin\DevExpress.RichEdit.v16.1.Core.dll" />
+    <Content Include="bin\DevExpress.RichEdit.v16.1.Core.xml" />
+    <Content Include="bin\DevExpress.Sparkline.v16.1.Core.dll" />
+    <Content Include="bin\DevExpress.Sparkline.v16.1.Core.xml" />
+    <Content Include="bin\DevExpress.SpellChecker.v16.1.Core.dll" />
+    <Content Include="bin\DevExpress.SpellChecker.v16.1.Core.xml" />
+    <Content Include="bin\DevExpress.Spreadsheet.v16.1.Core.dll" />
+    <Content Include="bin\DevExpress.Spreadsheet.v16.1.Core.xml" />
+    <Content Include="bin\DevExpress.Utils.v16.1.dll" />
+    <Content Include="bin\DevExpress.Utils.v16.1.xml" />
+    <Content Include="bin\DevExpress.Web.ASPxHtmlEditor.v16.1.dll" />
+    <Content Include="bin\DevExpress.Web.ASPxHtmlEditor.v16.1.xml" />
+    <Content Include="bin\DevExpress.Web.ASPxPivotGrid.v16.1.dll" />
+    <Content Include="bin\DevExpress.Web.ASPxPivotGrid.v16.1.xml" />
+    <Content Include="bin\DevExpress.Web.ASPxRichEdit.v16.1.dll" />
+    <Content Include="bin\DevExpress.Web.ASPxRichEdit.v16.1.xml" />
+    <Content Include="bin\DevExpress.Web.ASPxScheduler.v16.1.dll" />
+    <Content Include="bin\DevExpress.Web.ASPxScheduler.v16.1.xml" />
+    <Content Include="bin\DevExpress.Web.ASPxSpellChecker.v16.1.dll" />
+    <Content Include="bin\DevExpress.Web.ASPxSpellChecker.v16.1.xml" />
+    <Content Include="bin\DevExpress.Web.ASPxSpreadsheet.v16.1.dll" />
+    <Content Include="bin\DevExpress.Web.ASPxSpreadsheet.v16.1.xml" />
+    <Content Include="bin\DevExpress.Web.ASPxThemes.v16.1.dll" />
+    <Content Include="bin\DevExpress.Web.ASPxTreeList.v16.1.dll" />
+    <Content Include="bin\DevExpress.Web.ASPxTreeList.v16.1.xml" />
+    <Content Include="bin\DevExpress.Web.Mvc5.v16.1.dll" />
+    <Content Include="bin\DevExpress.Web.Resources.v16.1.dll" />
+    <Content Include="bin\DevExpress.Web.v16.1.dll" />
+    <Content Include="bin\DevExpress.Web.v16.1.xml" />
+    <Content Include="bin\DevExpress.Xpo.v16.1.dll" />
+    <Content Include="bin\DevExpress.Xpo.v16.1.xml" />
+    <Content Include="bin\DevExpress.XtraCharts.v16.1.dll" />
+    <Content Include="bin\DevExpress.XtraCharts.v16.1.Web.dll" />
+    <Content Include="bin\DevExpress.XtraCharts.v16.1.Web.xml" />
+    <Content Include="bin\DevExpress.XtraCharts.v16.1.xml" />
+    <Content Include="bin\DevExpress.XtraGauges.v16.1.Core.dll" />
+    <Content Include="bin\DevExpress.XtraGauges.v16.1.Core.xml" />
+    <Content Include="bin\DevExpress.XtraReports.v16.1.dll" />
+    <Content Include="bin\DevExpress.XtraReports.v16.1.Web.dll" />
+    <Content Include="bin\DevExpress.XtraReports.v16.1.Web.xml" />
+    <Content Include="bin\DevExpress.XtraReports.v16.1.xml" />
+    <Content Include="bin\DevExpress.XtraScheduler.v16.1.Core.dll" />
+    <Content Include="bin\DevExpress.XtraScheduler.v16.1.Core.xml" />
+    <Content Include="bin\de\DevExpress.Data.v16.1.resources.dll" />
+    <Content Include="bin\de\DevExpress.DataAccess.v16.1.resources.dll" />
+    <Content Include="bin\de\DevExpress.Office.v16.1.Core.resources.dll" />
+    <Content Include="bin\de\DevExpress.Pdf.v16.1.Core.resources.dll" />
+    <Content Include="bin\de\DevExpress.PivotGrid.v16.1.Core.resources.dll" />
+    <Content Include="bin\de\DevExpress.Printing.v16.1.Core.resources.dll" />
+    <Content Include="bin\de\DevExpress.RichEdit.v16.1.Core.resources.dll" />
+    <Content Include="bin\de\DevExpress.Sparkline.v16.1.Core.resources.dll" />
+    <Content Include="bin\de\DevExpress.Spreadsheet.v16.1.Core.resources.dll" />
+    <Content Include="bin\de\DevExpress.Utils.v16.1.resources.dll" />
+    <Content Include="bin\de\DevExpress.Web.ASPxHtmlEditor.v16.1.resources.dll" />
+    <Content Include="bin\de\DevExpress.Web.ASPxRichEdit.v16.1.resources.dll" />
+    <Content Include="bin\de\DevExpress.Web.ASPxScheduler.v16.1.resources.dll" />
+    <Content Include="bin\de\DevExpress.Web.ASPxSpellChecker.v16.1.resources.dll" />
+    <Content Include="bin\de\DevExpress.Web.ASPxSpreadsheet.v16.1.resources.dll" />
+    <Content Include="bin\de\DevExpress.Web.ASPxTreeList.v16.1.resources.dll" />
+    <Content Include="bin\de\DevExpress.Web.v16.1.resources.dll" />
+    <Content Include="bin\de\DevExpress.Xpo.v16.1.resources.dll" />
+    <Content Include="bin\de\DevExpress.XtraCharts.v16.1.resources.dll" />
+    <Content Include="bin\de\DevExpress.XtraGauges.v16.1.Core.resources.dll" />
+    <Content Include="bin\de\DevExpress.XtraReports.v16.1.resources.dll" />
+    <Content Include="bin\de\DevExpress.XtraReports.v16.1.Web.resources.dll" />
+    <Content Include="bin\de\DevExpress.XtraScheduler.v16.1.Core.resources.dll" />
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\EntityFramework.xml" />
+    <Content Include="bin\es\DevExpress.Data.v16.1.resources.dll" />
+    <Content Include="bin\es\DevExpress.DataAccess.v16.1.resources.dll" />
+    <Content Include="bin\es\DevExpress.Office.v16.1.Core.resources.dll" />
+    <Content Include="bin\es\DevExpress.Pdf.v16.1.Core.resources.dll" />
+    <Content Include="bin\es\DevExpress.PivotGrid.v16.1.Core.resources.dll" />
+    <Content Include="bin\es\DevExpress.Printing.v16.1.Core.resources.dll" />
+    <Content Include="bin\es\DevExpress.RichEdit.v16.1.Core.resources.dll" />
+    <Content Include="bin\es\DevExpress.Sparkline.v16.1.Core.resources.dll" />
+    <Content Include="bin\es\DevExpress.Spreadsheet.v16.1.Core.resources.dll" />
+    <Content Include="bin\es\DevExpress.Utils.v16.1.resources.dll" />
+    <Content Include="bin\es\DevExpress.Web.ASPxHtmlEditor.v16.1.resources.dll" />
+    <Content Include="bin\es\DevExpress.Web.ASPxRichEdit.v16.1.resources.dll" />
+    <Content Include="bin\es\DevExpress.Web.ASPxScheduler.v16.1.resources.dll" />
+    <Content Include="bin\es\DevExpress.Web.ASPxSpellChecker.v16.1.resources.dll" />
+    <Content Include="bin\es\DevExpress.Web.ASPxSpreadsheet.v16.1.resources.dll" />
+    <Content Include="bin\es\DevExpress.Web.ASPxTreeList.v16.1.resources.dll" />
+    <Content Include="bin\es\DevExpress.Web.v16.1.resources.dll" />
+    <Content Include="bin\es\DevExpress.Xpo.v16.1.resources.dll" />
+    <Content Include="bin\es\DevExpress.XtraCharts.v16.1.resources.dll" />
+    <Content Include="bin\es\DevExpress.XtraGauges.v16.1.Core.resources.dll" />
+    <Content Include="bin\es\DevExpress.XtraReports.v16.1.resources.dll" />
+    <Content Include="bin\es\DevExpress.XtraReports.v16.1.Web.resources.dll" />
+    <Content Include="bin\es\DevExpress.XtraScheduler.v16.1.Core.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Data.v16.1.resources.dll" />
+    <Content Include="bin\ja\DevExpress.DataAccess.v16.1.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Office.v16.1.Core.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Pdf.v16.1.Core.resources.dll" />
+    <Content Include="bin\ja\DevExpress.PivotGrid.v16.1.Core.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Printing.v16.1.Core.resources.dll" />
+    <Content Include="bin\ja\DevExpress.RichEdit.v16.1.Core.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Sparkline.v16.1.Core.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Spreadsheet.v16.1.Core.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Utils.v16.1.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Web.ASPxHtmlEditor.v16.1.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Web.ASPxRichEdit.v16.1.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Web.ASPxScheduler.v16.1.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Web.ASPxSpellChecker.v16.1.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Web.ASPxSpreadsheet.v16.1.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Web.ASPxTreeList.v16.1.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Web.v16.1.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Xpo.v16.1.resources.dll" />
+    <Content Include="bin\ja\DevExpress.XtraCharts.v16.1.resources.dll" />
+    <Content Include="bin\ja\DevExpress.XtraGauges.v16.1.Core.resources.dll" />
+    <Content Include="bin\ja\DevExpress.XtraReports.v16.1.resources.dll" />
+    <Content Include="bin\ja\DevExpress.XtraReports.v16.1.Web.resources.dll" />
+    <Content Include="bin\ja\DevExpress.XtraScheduler.v16.1.Core.resources.dll" />
+    <Content Include="bin\Microsoft.AI.Agent.Intercept.dll" />
+    <Content Include="bin\Microsoft.AI.DependencyCollector.dll" />
+    <Content Include="bin\Microsoft.AI.DependencyCollector.xml" />
+    <Content Include="bin\Microsoft.AI.PerfCounterCollector.dll" />
+    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.dll" />
+    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.xml" />
+    <Content Include="bin\Microsoft.AI.Web.dll" />
+    <Content Include="bin\Microsoft.AI.Web.xml" />
+    <Content Include="bin\Microsoft.AI.WindowsServer.dll" />
+    <Content Include="bin\Microsoft.AI.WindowsServer.xml" />
+    <Content Include="bin\Microsoft.ApplicationInsights.dll" />
+    <Content Include="bin\Microsoft.ApplicationInsights.xml" />
+    <Content Include="bin\Microsoft.Azure.AppService.ApiApps.Service.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\MuhasebeWeb.dll" />
+    <Content Include="bin\MuhasebeWeb.pdb" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Newtonsoft.Json.xml" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\ru\DevExpress.Data.v16.1.resources.dll" />
+    <Content Include="bin\ru\DevExpress.DataAccess.v16.1.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Office.v16.1.Core.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Pdf.v16.1.Core.resources.dll" />
+    <Content Include="bin\ru\DevExpress.PivotGrid.v16.1.Core.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Printing.v16.1.Core.resources.dll" />
+    <Content Include="bin\ru\DevExpress.RichEdit.v16.1.Core.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Sparkline.v16.1.Core.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Spreadsheet.v16.1.Core.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Utils.v16.1.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Web.ASPxHtmlEditor.v16.1.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Web.ASPxRichEdit.v16.1.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Web.ASPxScheduler.v16.1.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Web.ASPxSpellChecker.v16.1.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Web.ASPxSpreadsheet.v16.1.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Web.ASPxTreeList.v16.1.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Web.v16.1.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Xpo.v16.1.resources.dll" />
+    <Content Include="bin\ru\DevExpress.XtraCharts.v16.1.resources.dll" />
+    <Content Include="bin\ru\DevExpress.XtraGauges.v16.1.Core.resources.dll" />
+    <Content Include="bin\ru\DevExpress.XtraReports.v16.1.resources.dll" />
+    <Content Include="bin\ru\DevExpress.XtraReports.v16.1.Web.resources.dll" />
+    <Content Include="bin\ru\DevExpress.XtraScheduler.v16.1.Core.resources.dll" />
+    <Content Include="bin\Swashbuckle.Core.dll" />
+    <Content Include="bin\System.IdentityModel.Tokens.Jwt.dll" />
+    <Content Include="bin\System.IdentityModel.Tokens.Jwt.xml" />
+    <Content Include="bin\System.Net.Http.Formatting.dll" />
+    <Content Include="bin\System.Net.Http.Formatting.xml" />
+    <Content Include="bin\System.Web.Helpers.dll" />
+    <Content Include="bin\System.Web.Helpers.xml" />
+    <Content Include="bin\System.Web.Http.dll" />
+    <Content Include="bin\System.Web.Http.WebHost.dll" />
+    <Content Include="bin\System.Web.Http.WebHost.xml" />
+    <Content Include="bin\System.Web.Http.xml" />
+    <Content Include="bin\System.Web.Mvc.dll" />
+    <Content Include="bin\System.Web.Mvc.xml" />
+    <Content Include="bin\System.Web.Optimization.dll" />
+    <Content Include="bin\System.Web.Optimization.xml" />
+    <Content Include="bin\System.Web.Razor.dll" />
+    <Content Include="bin\System.Web.Razor.xml" />
+    <Content Include="bin\System.Web.WebPages.Deployment.dll" />
+    <Content Include="bin\System.Web.WebPages.Deployment.xml" />
+    <Content Include="bin\System.Web.WebPages.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.xml" />
+    <Content Include="bin\System.Web.WebPages.xml" />
+    <Content Include="bin\WebActivatorEx.dll" />
+    <Content Include="bin\WebGrease.dll" />
+    <Content Include="Content\AdminCss\bootstrap-responsive.min.css" />
+    <Content Include="Content\AdminCss\bootstrap-select.min.css" />
+    <Content Include="Content\AdminCss\theme.css" />
+    <Content Include="Content\animate.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\datepicker.css" />
+    <Content Include="Content\datepicker3.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\img\bg1.jpg" />
+    <Content Include="Content\img\blog\img1.jpg" />
+    <Content Include="Content\img\blog\img2.jpg" />
+    <Content Include="Content\img\blog\img3.jpg" />
+    <Content Include="Content\img\counter.jpg" />
+    <Content Include="Content\img\dummy.png" />
+    <Content Include="Content\img\features\feature.png" />
+    <Content Include="Content\img\hero-area.jpg" />
+    <Content Include="Content\img\logo.png" />
+    <Content Include="Content\img\map-marker.png" />
+    <Content Include="Content\img\portfolio\img1.jpg" />
+    <Content Include="Content\img\portfolio\img2.jpg" />
+    <Content Include="Content\img\portfolio\img3.jpg" />
+    <Content Include="Content\img\portfolio\img4.jpg" />
+    <Content Include="Content\img\portfolio\img5.jpg" />
+    <Content Include="Content\img\portfolio\img6.jpg" />
+    <Content Include="Content\img\slider\bg-1.jpg" />
+    <Content Include="Content\img\slider\bg-2.jpg" />
+    <Content Include="Content\img\slider\bg-3.jpg" />
+    <Content Include="Content\img\switch.png" />
+    <Content Include="Content\img\team\team1.jpg" />
+    <Content Include="Content\img\team\team2.jpg" />
+    <Content Include="Content\img\team\team3.jpg" />
+    <Content Include="Content\img\team\team4.jpg" />
+    <Content Include="Content\img\testimonial-bg.jpg" />
+    <Content Include="Content\img\testimonial\customer1.jpg" />
+    <Content Include="Content\img\testimonial\customer2.jpg" />
+    <Content Include="Content\img\testimonial\customer3.jpg" />
+    <Content Include="Content\img\testimonial\customer4.jpg" />
+    <Content Include="Content\img\videobg.jpg" />
+    <Content Include="Content\line-icons.css" />
+    <Content Include="Content\img\loader.gif" />
+    <Content Include="Content\loaderCss.css" />
+    <Content Include="Content\magnific-popup.css" />
+    <Content Include="Content\main.css" />
+    <Content Include="Content\multi-select.css" />
+    <Content Include="Content\multi-select.dev.css" />
+    <Content Include="Content\multi-select.dist.css" />
+    <Content Include="Content\nivo-lightbox.css" />
+    <Content Include="Content\owl.carousel.css" />
+    <Content Include="Content\owl.theme.css" />
+    <Content Include="Content\responsive.css" />
+    <Content Include="Content\slicknav.css" />
+    <Content Include="Content\AdminCss\style.bundle.css" />
+    <Content Include="Content\AdminCss\vendors.bundle.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\AdminJs\AddItem.js" />
+    <Content Include="Scripts\AdminJs\bootstrap-select.min.js" />
+    <Content Include="Scripts\AdminJs\login.js" />
+    <Content Include="Scripts\AdminJs\MenuJs.js" />
+    <Content Include="Scripts\AdminJs\scripts.bundle.js" />
+    <Content Include="Scripts\AdminJs\TableCrud.js" />
+    <Content Include="Scripts\AdminJs\vendors.bundle.js" />
+    <Content Include="Scripts\ai.0.22.9-build00167.js" />
+    <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker.js" />
+    <Content Include="Scripts\bootstrap-datepicker.tr.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\main.scss" />
+    <Content Include="Content\responsive.scss" />
+    <Content Include="Content\img\blog\.DS_Store" />
+    <Content Include="Content\img\features\.DS_Store" />
+    <Content Include="Content\img\slider\.DS_Store" />
+    <Content Include="Content\img\portfolio\.DS_Store" />
+    <Content Include="Content\img\team\.DS_Store" />
+    <Content Include="Content\img\testimonial\.DS_Store" />
+    <Content Include="Content\img\logo.psd" />
+    <Content Include="Content\img\.DS_Store" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\Linearicons-Free.eot" />
+    <Content Include="fonts\Linearicons-Free.ttf" />
+    <Content Include="fonts\Linearicons-Free.woff" />
+    <Content Include="fonts\Linearicons-Free.woff2" />
+    <Content Include="Content\multi-select.dev.css.map" />
+    <Content Include="apiapp.json" />
+    <Content Include="Content\Document\taslak.xlsx" />
+    <Content Include="Content\Excel\veri.xlsx" />
+    <Content Include="bin\ApplicationInsights.config" />
+    <None Include="bin\MuhasebeWeb.dll.config" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <None Include="Properties\PublishProfiles\masaustu.pubxml" />
+    <None Include="Properties\PublishProfiles\MuhasebeWeb20180223080619 - Web Deploy %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\MuhasebeWeb20180223080619 - Web Deploy.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\contact-form-script.js" />
+    <Content Include="Scripts\Fill.js" />
+    <Content Include="Scripts\form-validator.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-min.js" />
+    <Content Include="Scripts\jquery.counterup.min.js" />
+    <Content Include="Scripts\jquery.easing.min.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.magnific-popup.min.js" />
+    <Content Include="Scripts\jquery.mixitup.js" />
+    <Content Include="Scripts\jquery.multi-select.js" />
+    <Content Include="Scripts\jquery.nav.js" />
+    <Content Include="Scripts\jquery.quicksearch.js" />
+    <Content Include="Scripts\jquery.slicknav.js" />
+    <Content Include="Scripts\jquery.stellar.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jquery.vide.js" />
+    <Content Include="Scripts\main.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\nivo-lightbox.js" />
+    <Content Include="Scripts\owl.carousel.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\scrolling-nav.js" />
+    <Content Include="Scripts\smoothscroll.js" />
+    <Content Include="Scripts\waypoints.min.js" />
+    <Content Include="Scripts\wow.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Account.cshtml" />
+    <Content Include="Views\Home\Branch.cshtml" />
+    <Content Include="Views\Home\BranchGroup.cshtml" />
+    <Content Include="Views\Home\calculate.cshtml" />
+    <Content Include="Views\Home\CompanySelector.cshtml" />
+    <Content Include="Views\Home\CompanyTypeSelector.cshtml" />
+    <Content Include="Views\Admin\Login.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Views\Admin\_SpreadsheetPartial.cshtml" />
+    <Content Include="Views\Admin\GetTable.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201803171325433_decimalsds.resx">
+      <DependentUpon>201803171325433_decimalsds.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55650</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:55650/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

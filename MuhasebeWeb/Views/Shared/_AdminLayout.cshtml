@@ -1,0 +1,119 @@
+﻿@using NihaiWeb.Models
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />    
+    <link href="~/Content/AdminCss/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="~/Content/AdminCss/theme.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600' rel='stylesheet'>
+    @RenderSection("head", required: false);
+
+</head>
+<body>
+
+    <div class="navbar navbar-inverse navbar-twitch" role="navigation">
+        <div class="container">
+            <div>
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="@Url.Action("Index","Admin")">
+                            <span class="small-nav" data-toggle="tooltip" data-placement="right" title="Yeni İşlemleri">
+                                <span class="fa fa-hacker-news"></span>
+                            </span>
+                            <span class="full-nav"> Yeni İşlemleri </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("GetTable","Admin",new {id=0})">
+                            <span class="small-nav" data-toggle="tooltip" data-placement="right" title="Şirket Tipleri">
+                                <span class="fa fa-building"></span>
+                            </span>
+                            <span class="full-nav"> Şirket Tipleri </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("GetTable","Admin",new {id=1})">
+                            <span class="small-nav" data-toggle="tooltip" data-placement="right" title="Şirketler">
+                                <span class="fa fa-home"></span>
+                            </span>
+                            <span class="full-nav"> Şirketler </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("GetTable","Admin",new {id=2})">
+                            <span class="small-nav" data-toggle="tooltip" data-placement="right" title="Branş Grupları">
+                                <span class="fa fa-object-group"></span>
+                            </span>
+                            <span class="full-nav"> Branş Grupları </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("GetTable","Admin",new {id=3})">
+                            <span class="small-nav" data-toggle="tooltip" data-placement="right" title="Branşlar">
+                                <span class="fa fa-object-ungroup"></span>
+                            </span>
+                            <span class="full-nav"> Branşlar </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("GetTable","Admin",new {id=4})">
+                            <span class="small-nav" data-toggle="tooltip" data-placement="right" title="Hesap Türleri">
+                                <span class="fa fa-align-justify"></span>
+                            </span>
+                            <span class="full-nav"> Hesap Türleri </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("GetTable","Admin",new {id=5})">
+                            <span class="small-nav" data-toggle="tooltip" data-placement="right" title="Hesaplamalar">
+                                <span class="fa fa-calculator"></span>
+                            </span>
+                            <span class="full-nav"> Hesaplamalar </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("GetTable","Admin",new {id=6})">
+                            <span class="small-nav" data-toggle="tooltip" data-placement="right" title="Hesap İlişkileri">
+                                <span class="fa fa-asterisk"></span>
+                            </span>
+                            <span class="full-nav"> Hesap İlişkileri </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("GetTable","Admin",new {id=7})">
+                            <span class="small-nav" data-toggle="tooltip" data-placement="right" title="Veriler">
+                                <span class="fa fa-at"></span>
+                            </span>
+                            <span class="full-nav"> Veriler </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("LogOut","Admin")">
+                            <span class="small-nav" data-toggle="tooltip" data-placement="right" title="Çıkış Yap">
+                                <span class="fa fa-sign-out" style="color:red"></span>
+                            </span>
+                            <span class="full-nav"> Çıkış Yap </span>
+                        </a>
+                    </li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+
+    <div class="container">
+        @RenderBody()
+    </div>
+
+    
+
+    <script src="~/Scripts/jquery.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/AdminJs/MenuJs.js"></script>
+    @RenderSection("scripts", required: false);
+
+</body>
+</html>
