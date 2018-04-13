@@ -14,7 +14,6 @@ using System.Web.Script.Serialization;
 using MuhasebeWeb.Models;
 using DevExpress.Spreadsheet;
 using MuhasebeWeb.Models.TableModels;
-using MuhasebeWeb.Models.TableModels.TableCRUD;
 
 namespace MuhasebeWeb.Controllers
 {
@@ -424,33 +423,248 @@ namespace MuhasebeWeb.Controllers
                 return Json(0, JsonRequestBehavior.AllowGet);
             }
         }
-
-        public ActionResult Update(Data d)
+        [HttpPost]
+        public JsonResult Update(string[] d)
         {
+            int say = 2;
+            int id = Convert.ToInt32(d[1]);
             try
             {
-                DataBusiness bb = new DataBusiness();
-                bb.Update(d);
-                return RedirectToAction("GetTable", new { id = 7 });
+                switch (Convert.ToInt32(d[0]))
+                {
+                    case 0:
+                        CompanyType t = Context.CompanyTypes.SingleOrDefault(s => s.id == id);
+                        foreach (var prop in t.GetType().GetProperties())
+                        {
+                            if (!prop.PropertyType.IsClass || prop.PropertyType.ToString().Contains("String"))
+                            {
+                                if (!prop.PropertyType.ToString().Contains("ICollection"))
+                                {
+
+                                    if (prop.Name != "id")
+                                    {
+                                        if (prop.Name.Contains("id") || prop.Name.Contains("Id"))
+                                        {
+                                            t.GetType().GetProperty(prop.Name).SetValue(t, Convert.ToInt32(d[say]));
+                                        }
+                                        else
+                                        {
+                                            t.GetType().GetProperty(prop.Name).SetValue(t, d[say]);
+                                        }
+                                        say++;
+                                    }
+                                }
+                            }
+
+                            
+                        }
+                        break;
+                    case 1:
+                        Company c = Context.Companies.SingleOrDefault(s => s.id == id);
+                        foreach (var prop in c.GetType().GetProperties())
+                        {
+                            if (!prop.PropertyType.IsClass || prop.PropertyType.ToString().Contains("String"))
+                            {
+                                if (!prop.PropertyType.ToString().Contains("ICollection"))
+                                {
+
+                                    if (prop.Name != "id")
+                                    {
+                                        if (prop.Name.Contains("id") || prop.Name.Contains("Id"))
+                                        {
+                                            c.GetType().GetProperty(prop.Name).SetValue(c, Convert.ToInt32(d[say]));
+                                        }
+                                        else
+                                        {
+                                            c.GetType().GetProperty(prop.Name).SetValue(c, d[say]);
+                                        }
+                                        say++;
+                                    }
+                                }
+                            }
+
+                            
+                        }
+                        break;
+                    case 2:
+                        BranchGroup bg = Context.branchGroups.SingleOrDefault(s => s.id == id);
+                        foreach (var prop in bg.GetType().GetProperties())
+                        {
+                            if (!prop.PropertyType.IsClass || prop.PropertyType.ToString().Contains("String"))
+                            {
+                                if (!prop.PropertyType.ToString().Contains("ICollection"))
+                                {
+
+                                    if (prop.Name != "id")
+                                    {
+                                        if (prop.Name.Contains("id") || prop.Name.Contains("Id"))
+                                        {
+                                            bg.GetType().GetProperty(prop.Name).SetValue(bg, Convert.ToInt32(d[say]));
+                                        }
+                                        else
+                                        {
+                                            bg.GetType().GetProperty(prop.Name).SetValue(bg, d[say]);
+                                        }
+                                        say++;
+                                    }
+                                }
+                            }
+
+                            
+                        }
+                        break;
+                    case 3:
+                        Branch b = Context.Branchs.SingleOrDefault(s => s.id == id);
+                        foreach (var prop in b.GetType().GetProperties())
+                        {
+                            if (!prop.PropertyType.IsClass || prop.PropertyType.ToString().Contains("String"))
+                            {
+                                if (!prop.PropertyType.ToString().Contains("ICollection"))
+                                {
+
+                                    if (prop.Name != "id")
+                                    {
+                                        if (prop.Name.Contains("id") || prop.Name.Contains("Id")||prop.Name.Contains("Code"))
+                                        {
+                                            b.GetType().GetProperty(prop.Name).SetValue(b, Convert.ToInt32(d[say]));
+                                        }
+                                        else
+                                        {
+                                            b.GetType().GetProperty(prop.Name).SetValue(b, d[say]);
+                                        }
+                                        say++;
+                                    }
+                                }
+                            }
+
+                            
+                        }
+                        break;
+                    case 4:
+                        Account a = Context.Accounts.SingleOrDefault(s => s.id == id);
+                        foreach (var prop in a.GetType().GetProperties())
+                        {
+                            if (!prop.PropertyType.IsClass || prop.PropertyType.ToString().Contains("String"))
+                            {
+                                if (!prop.PropertyType.ToString().Contains("ICollection"))
+                                {
+
+                                    if (prop.Name != "id")
+                                    {
+                                        if (prop.Name.Contains("id") || prop.Name.Contains("Id"))
+                                        {
+                                            a.GetType().GetProperty(prop.Name).SetValue(a, Convert.ToInt32(d[say]));
+                                        }
+                                        else
+                                        {
+                                            a.GetType().GetProperty(prop.Name).SetValue(a, d[say]);
+                                        }
+                                        say++;
+                                    }
+                                }
+                            }
+
+                            
+                        }
+                        break;
+                    case 5:
+                        Calc cc = Context.Calcs.SingleOrDefault(s => s.id == id);
+                        foreach (var prop in cc.GetType().GetProperties())
+                        {
+                            if (!prop.PropertyType.IsClass || prop.PropertyType.ToString().Contains("String"))
+                            {
+                                if (!prop.PropertyType.ToString().Contains("ICollection"))
+                                {
+
+                                    if (prop.Name != "id")
+                                    {
+                                        if (prop.Name.Contains("id") || prop.Name.Contains("Id"))
+                                        {
+                                            cc.GetType().GetProperty(prop.Name).SetValue(cc, Convert.ToInt32(d[say]));
+                                        }
+                                        else
+                                        {
+                                            cc.GetType().GetProperty(prop.Name).SetValue(cc, d[say]);
+                                        }
+                                        say++;
+                                    }
+                                }
+                            }
+
+                            
+                        }
+                        break;
+                    case 6:
+                        AccountCalcRelation acr = Context.AccountCalcRelation.SingleOrDefault(s => s.id ==id);
+                        foreach (var prop in acr.GetType().GetProperties())
+                        {
+                            if (!prop.PropertyType.IsClass || prop.PropertyType.ToString().Contains("String"))
+                            {
+                                if (!prop.PropertyType.ToString().Contains("ICollection"))
+                                {
+
+                                    if (prop.Name != "id")
+                                    {
+                                        if (prop.Name.Contains("id") || prop.Name.Contains("Id"))
+                                        {
+                                            acr.GetType().GetProperty(prop.Name).SetValue(acr, Convert.ToInt32(d[say]));
+                                        }
+                                        else
+                                        {
+                                            acr.GetType().GetProperty(prop.Name).SetValue(acr, d[say]);
+                                        }
+                                        say++;
+                                    }
+                                }
+                            }
+
+                            
+                        }
+                        break;
+                    case 7:
+                        Data da = Context.Datas.SingleOrDefault(s => s.id ==id);
+                        foreach (var prop in da.GetType().GetProperties())
+                        {
+                            if (!prop.PropertyType.IsClass || prop.PropertyType.ToString().Contains("String"))
+                            {
+                                if (!prop.PropertyType.ToString().Contains("ICollection"))
+                                {
+
+                                    if (prop.Name != "id")
+                                    {
+                                        if (prop.Name.Contains("id") || prop.Name.Contains("Id"))
+                                        {
+                                            da.GetType().GetProperty(prop.Name).SetValue(da, Convert.ToInt32(d[say]));
+                                        }
+                                        else if (prop.Name.Contains("date"))
+                                        {
+                                            da.GetType().GetProperty(prop.Name).SetValue(da, Convert.ToDateTime(d[say]));
+                                        }
+                                        else
+                                        {
+                                            da.GetType().GetProperty(prop.Name).SetValue(da, d[say]);
+                                        }
+                                        say++;
+                                    }
+                                }
+                            }
+
+                            
+                        }
+                        
+                        break;
+                }
+
+                Context.SaveChanges();
+                return Json(1);
             }
-            catch
+            catch(Exception e)
             {
-                return RedirectToAction("Index");
+                return Json(0);
             }
         }
 
-        public JsonResult Search(int id, int skip)
-        {
-            try
-            {
-                DataBusiness bb = new DataBusiness();
-                return Json(bb.GetList(skip), JsonRequestBehavior.AllowGet);
-            }
-            catch
-            {
-                return Json(0, JsonRequestBehavior.AllowGet);
-            }
-        }
+   
         [HttpGet]
         public JsonResult SearchParameter(string type, string type2, string filter)
         {
@@ -621,18 +835,7 @@ namespace MuhasebeWeb.Controllers
             return Json("dsa", JsonRequestBehavior.AllowGet);
         }
 
-        public JsonResult Get(int id)
-        {
-            try
-            {
-                DataBusiness bb = new DataBusiness();
-                return Json(bb.Get(s => s.id == id), JsonRequestBehavior.AllowGet);
-            }
-            catch
-            {
-                return Json(0, JsonRequestBehavior.AllowGet);
-            }
-        }
+    
         [HttpGet]
         public JsonResult Next(string type, int skip)
         {

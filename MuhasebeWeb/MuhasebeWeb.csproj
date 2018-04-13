@@ -226,16 +226,6 @@
     <Compile Include="Models\TableModels\CompanyTable.cs" />
     <Compile Include="Models\TableModels\CompanyTypeTable.cs" />
     <Compile Include="Models\TableModels\DataTable.cs" />
-    <Compile Include="Models\TableModels\TableCRUD\AccountBusiness.cs" />
-    <Compile Include="Models\TableModels\TableCRUD\AccountCalcRelationBusiness.cs" />
-    <Compile Include="Models\TableModels\TableCRUD\BranchBusiness.cs" />
-    <Compile Include="Models\TableModels\TableCRUD\BranchGroupBusiness.cs" />
-    <Compile Include="Models\TableModels\TableCRUD\BusinessLayer.cs" />
-    <Compile Include="Models\TableModels\TableCRUD\CalcBusiness.cs" />
-    <Compile Include="Models\TableModels\TableCRUD\CompanyBusiness.cs" />
-    <Compile Include="Models\TableModels\TableCRUD\CompanyTypeBusiness.cs" />
-    <Compile Include="Models\TableModels\TableCRUD\DataBusiness.cs" />
-    <Compile Include="Models\TableModels\TableCRUD\IBusinessLayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

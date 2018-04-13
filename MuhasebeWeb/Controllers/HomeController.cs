@@ -10,7 +10,6 @@ using System.Web;
 using System.Web.Mvc;
 using DevExpress.Spreadsheet;
 using DevExpress.Web.Mvc;
-
 namespace MuhasebeWeb.Controllers
 {
     public class HomeController : Controller
