@@ -1,0 +1,20 @@
+﻿@model List<SigortaWeb.Models.CompanyType>
+<div class="form-group m-form__group ">
+    <div class="form-group m-form__group">
+
+        <label>
+            Şirket Tipi
+            <small style="color:red" onclick="deselectCompanies()" id="notificationcg"></small>
+        </label>
+        
+        <br />
+        <select id="companyTypeSelector" hidden>
+            @foreach (var item in Model)
+            {
+                <option value="@item.id"> @item.name</option>
+            }
+        </select>
+    </div>
+</div>
+
+

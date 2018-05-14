@@ -1,0 +1,72 @@
+﻿@model SigortaWeb.Models.Table
+@{
+    ViewBag.Title = "EditTable";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!-- Container Starts -->
+<form method="post" action="@Url.Action("EditTable","Admin")">
+    <div class="container">
+        <div class="row table-responsive">
+            <input type="text" hidden class="form-control" value="@Model.Id" name="Id" />
+            <table class="table table-striped scrolldiv">
+                <thead>
+                <tr>
+                    <th scope="col"><input type="text" class="form-control" value="@Model.TableName" name="TableName" /></th>
+                    <th scope="col"><input type="text" class="form-control" value="@Model.Tarih1" name="Tarih1"/> </th>
+                    <th scope="col"><input type="text" class="form-control" value="@Model.Tarih2" name="Tarih2"/></th>
+                    <th scope="col"><input type="text" class="form-control" value="@Model.Tarih3" name="Tarih3"/></th>
+                    <th scope="col"><input type="text" class="form-control" value="@Model.Tarih4" name="Tarih4"/></th>
+                    <th scope="col"><input type="text" class="form-control" value="@Model.Tarih5" name="Tarih5"/></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row"><input type="text" class="form-control" value="@Model.Sirket1" name="Sirket1"/></th>
+                    <td><input type="text" class="form-control" value="@Model.Deger11" name="Deger11"/></td>
+                    <td><input type="text" class="form-control" value="@Model.Deger12" name="Deger12"/></td>
+                    <td><input type="text" class="form-control" value="@Model.Deger13" name="Deger13"/></td>
+                    <td><input type="text" class="form-control" value="@Model.Deger14" name="Deger14"/></td>
+                    <td><input type="text" class="form-control" value="@Model.Deger15" name="Deger15"/></td>
+                </tr>
+                <tr>
+                    <th scope="row"><input type="text" class="form-control" value="@Model.Sirket2" name="Sirket2"/></th>
+                    <td><input type="text" class="form-control" value="@Model.Deger21" name="Deger21"/></td>
+                    <td><input type="text" class="form-control" value="@Model.Deger22" name="Deger22"/></td>
+                    <td><input type="text" class="form-control" value="@Model.Deger23" name="Deger23"/></td>
+                    <td><input type="text" class="form-control" value="@Model.Deger24" name="Deger24"/></td>
+                    <td><input type="text" class="form-control" value="@Model.Deger25" name="Deger25"/></td>
+                </tr>
+                <tr>
+                    <th scope="row"><input type="text" class="form-control" value="@Model.Sirket3" name="Sirket3"/></th>
+                    <td><input type="text" class="form-control" value="@Model.Deger31" name="Deger31"/></td>
+                    <td><input type="text" class="form-control" value="@Model.Deger32" name="Deger32"/></td>
+                    <td><input type="text" class="form-control" value="@Model.Deger33" name="Deger33"/></td>
+                    <td><input type="text" class="form-control" value="@Model.Deger34" name="Deger34"/></td>
+                    <td><input type="text" class="form-control" value="@Model.Deger35" name="Deger35"/></td>
+                </tr>
+                <tr>
+                    <th scope="row"><input type="text" class="form-control" value="@Model.Sirket4" name="Sirket4"/></th>
+                    <td><input type="text" class="form-control" value="@Model.Deger41" name="Deger41"/></td>
+                    <td><input type="text" class="form-control" value="@Model.Deger42" name="Deger42"/></td>
+                    <td><input type="text" class="form-control" value="@Model.Deger43" name="Deger43"/></td>
+                    <td><input type="text" class="form-control" value="@Model.Deger44" name="Deger44"/></td>
+                    <td><input type="text" class="form-control" value="@Model.Deger45" name="Deger45"/></td>
+                </tr>
+                <tr>
+                    <th scope="row"><input type="text" class="form-control" value="@Model.Sirket5" name="Sirket5"/></th>
+                    <td><input type="text" class="form-control" value="@Model.Deger51" name="Deger51"/></td>
+                    <td><input type="text" class="form-control" value="@Model.Deger52" name="Deger52"/></td>
+                    <td><input type="text" class="form-control" value="@Model.Deger53" name="Deger53"/></td>
+                    <td><input type="text" class="form-control" value="@Model.Deger54" name="Deger54"/></td>
+                    <td><input type="text" class="form-control" value="@Model.Deger55" name="Deger55"/></td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <br />
+        <button type="submit" class="btn btn-lg btn-primary pull-right">Kaydet</button>
+    </div>
+</form>
+<!-- Container Ends -->

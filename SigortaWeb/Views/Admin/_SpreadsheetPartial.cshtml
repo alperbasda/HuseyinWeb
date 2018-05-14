@@ -1,0 +1,10 @@
+
+@Html.DevExpress().Spreadsheet(
+    settings => {
+                    settings.Name = "veri";
+                    settings.CallbackRouteValues = new { Controller = "Admin", Action = "CreateData" };
+                    settings.Width = Unit.Percentage(100);
+                    settings.Height = 700;
+                    settings.ActiveTabIndex = 0;
+    }
+    ).GetHtml()
